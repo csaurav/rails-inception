@@ -6,10 +6,27 @@ rails-inception is a bootstrap application Ruby on Rails 3.2.7, which also uses 
 
 Clone the git repo - `git clone git://github.com/csaurav/rails-inception.git` - or [download it](https://github.com/csaurav/rails-inception/downloads)
 
-Execute rake to create the users database
+Perform the following steps to run the application: 
 <pre>
-rake db:migrate
-</pre>
+	1. cd cloned-directory
+	2. bundle install
+	3. Go inside config/envrionments/development.rb and change below portion of the code with your gmail username and password
+
+	ActionMailer::Base.smtp_settings = {
+	    :address => "smtp.gmail.com",
+	    :port => "587",
+	    :domain => "gmail.com",
+	    :enable_starttls_auto => true,
+	    :authentication => :login,
+	    :user_name => "someuser@gmail.com",
+	    :password => "*********"
+	  }
+
+<pre>
+	4. Execute rake to create the users database
+	<pre>
+		rake db:migrate
+	</pre>
 
 
 ### Everything else:
