@@ -22,11 +22,11 @@ Perform the following steps to run the application:
 	    :password => "*********"
 	  }
 
+
+	4.Execute rake to create the users database
+	 		rake db:migrate
 <pre>
-	4. Execute rake to create the users database
-	<pre>
-		rake db:migrate
-	</pre>
+
 
 
 ### Everything else:
